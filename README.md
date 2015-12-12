@@ -22,10 +22,10 @@ You can read more about this pattern and how it's used at:
 ```go
 (if (breaker/tripped? circuit-breaker circuit-name)
   (do-fake-action)
-    (try
-      (do-action)
-      (breaker/record-success! circuit-breaker circuit-name)
-       (catch Exception e (breaker/record-failure! circuit-breaker circuit-name))))
+  (try
+    (do-action)
+    (breaker/record-success! circuit-breaker circuit-name)
+     (catch Exception e (breaker/record-failure! circuit-breaker circuit-name))))
 ```
 
 ## Include in your code
