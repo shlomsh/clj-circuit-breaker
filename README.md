@@ -18,7 +18,7 @@ You can read more about this pattern and how it's used at:
 - [Release It!](http://pragprog.com/book/mnee/release-it)
 
 
-## Usage
+## Code Example
 ```go
 (if (breaker/tripped? circuit-breaker circuit-name)
   (do-fake-action)
@@ -28,7 +28,7 @@ You can read more about this pattern and how it's used at:
        (catch Exception e (breaker/record-failure! circuit-breaker circuit-name))))
 ```
 
-## Use in your code
+## Include in your code
 [![Clojars Project](http://clojars.org/clj-circuit-breaker/latest-version.svg)](http://clojars.org/clj-circuit-breaker)
 
 ## License
