@@ -17,8 +17,6 @@ You can read more about this pattern and how it's used at:
 - [The Netflix Tech Blog](http://techblog.netflix.com/2012/02/fault-tolerance-in-high-volume.html)
 - [Release It!](http://pragprog.com/book/mnee/release-it)
 
-[![GoDoc](https://godoc.org/github.com/rubyist/circuitbreaker?status.svg)](https://godoc.org/github.com/rubyist/circuitbreaker)
-
 
 ## Usage
 ```go
@@ -29,6 +27,9 @@ You can read more about this pattern and how it's used at:
       (breaker/record-success! circuit-breaker circuit-name)
        (catch Exception e (breaker/record-failure! circuit-breaker circuit-name))))
 ```
+
+## Use in your code
+[![Clojars Project](http://clojars.org/clj-circuit-breaker/latest-version.svg)](http://clojars.org/clj-circuit-breaker)
 
 ## License
 
