@@ -4,13 +4,12 @@ A Clojure library that implements the circuit breaker design pattern.
 
 ## Usage
 
-(if (breaker/tripped? circuit-breaker circuit-name)
-  (do-fake-action)
-   (try
-      (do-action)
-      (breaker/record-success! circuit-breaker circuit-name)
+(if (breaker/tripped? circuit-breaker circuit-name)<br>
+  (do-fake-action)<br>
+    (try<br>
+      (do-action)<br>
+      (breaker/record-success! circuit-breaker circuit-name)<br>
        (catch Exception e (breaker/record-failure! circuit-breaker circuit-name))))
-
 ## License
 
 Copyright © 2015 
